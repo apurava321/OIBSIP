@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script type="text/javascript" src="calci.js"></script>  
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #92E0A7;
+}
+
+.content-calculadora{
+  width: 384px;
+  height: 600px;
+  overflow: hidden;
+  background-color: #B67ADE;
+  box-shadow: 0 25px 50px -12px;
+  border-radius: 10px;
+}
+
+#resultado{
+   width: 384px;
+  height: 96px;
+  outline: 0;
+  border: 0;
+  padding: 0px 20px 0px 20px;
+  font-size: 24px;
+}
+
+.num-container{
+  width: 100%;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #FFF64D;
+}
+
+.num-container-2{
+   width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 0px 5px 0px 1px;
+}
+
+.c-button{
+  width: 64px;
+  height: 64px;
+  background-color: #F9F3EC;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px -15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.c-button-2{
+   width: 144px;
+  height: 64px;
+  border-radius: 50px;
+  font-size: 27px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+   box-shadow: 0 20px 40px -15px;
+  background-color: #DF92E0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="content-calculadora">
+    <div>
+      <input type="text" id="resultado" placeholder="0">
+    </div>
+   <div class="num-container">
+     <button class="c-button" onclick="numeros(7)">7</button>
+     <button class="c-button" onclick="numeros(8)">8</button>
+     <button class="c-button" onclick="numeros(9)">9</button>
+     <button class="c-button" onclick="numeros('+')">+</button>
+   </div>
+    <div class="num-container">
+     <button class="c-button" onclick="numeros(4)">4</button>
+     <button class="c-button" onclick="numeros(5)">5</button>
+     <button class="c-button" onclick="numeros(6)">6</button>
+     <button class="c-button" onclick="numeros('-')">-</button>
+   </div>
+    <div class="num-container">
+     <button class="c-button" onclick="numeros(1)">1</button>
+     <button class="c-button" onclick="numeros(2)">2</button>
+     <button class="c-button" onclick="numeros(3)">3</button>
+     <button class="c-button" onclick="numeros('/')">/</button>
+   </div>
+    <div class="num-container">
+     <button class="c-button" onclick="reset()">C</button>
+     <button class="c-button" onclick="numeros(0)">0</button>
+     <button class="c-button" onclick="numeros('.')">.</button>
+     <button class="c-button" onclick="numeros('*')">x</button>
+   </div>
+    <div class="num-container-2">
+     <button class="c-button" onclick="numeros('<')"><</button>
+     <button class="c-button" onclick="numeros('>')">></button>
+     <button class="c-button-2" onclick="operacion()">=</button>
+   </div>
+  </div>
+</body>
+</html>
